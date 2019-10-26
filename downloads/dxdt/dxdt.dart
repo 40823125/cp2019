@@ -74,7 +74,7 @@ main() {
   num t0 = 0;
   num x0 = 1;
   num v0 = 0;
-  num t = 15;
+  num t = 16;
   double h = 0.1;
   rungeKutta(t0, x0, v0, t, h);
 }
