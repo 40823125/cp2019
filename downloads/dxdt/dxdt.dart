@@ -4,9 +4,8 @@
 // f 為沿位移方向的施力
 // dx/dt = v, dv/dt = (f-kx-bv)/m
 // dx / dt = (t - x)/2, 起始值 t0=0, x0=1, 求 t=2 時的 x 值
-//
-// 已知起始值 t0 與 x0 後, 可以利用下列 rungeKutta 函式, 以
-// h 為每步階增量值, 求 dxdt 常微分方程式任一 t 的對應值 x
+// 已知起始值 t0 與 x0 後, 可以利用下列 rungeKutta 函式
+// 以h為每步階增量值, 求 dxdt 常微分方程式任一 t 的對應值 x
 // 定義函式 rungeKutta, 共有四個輸入變數
 // 物體質量
 const num m = 1;
@@ -26,6 +25,8 @@ rungeKutta(t0, x0, v0, t, h) {
   double x = x0;
   // 宣告 v 為雙浮點數, 且設為起始值 v0
   double v = v0;
+  //宣告t0 = 0.000 x = 1.000 v = 0.000 後進入迴圈
+  // \t 為不顯示前一個的代號
   print(" ${t0.toStringAsFixed(3)}\t ${x.toStringAsFixed(3)}\t ${v.toStringAsFixed(3)}\t");
   // 利用已知的 t0, x0, t 終點值與步階增量值 h, 迭代求 x 對應值
   // 索引值 i 將每次增量 1, 從 i=1 執行 for 環圈至 i=n
@@ -47,7 +48,8 @@ rungeKutta(t0, x0, v0, t, h) {
     // 每次 for 迴圈執行最後, 準備計算下一個步階增量後的 x 對應值
     // t 起始值配合步階增量值 h, 進行增量
     t0 = t0 + h;
-    // 只列到小數點第三位
+    // 宣告計算結果
+    // toStringAsFixed(3)為只列到小數點第三位
     print(" ${t0.toStringAsFixed(3)}\t ${x.toStringAsFixed(3)}\t ${v.toStringAsFixed(3)}\t");
   }
   // 完成 for 迴圈迭代後, 傳回與 t 終點值對應的 x 值
@@ -59,6 +61,7 @@ dxdt(t, x, v) {
   return v;
 }
 // dx/dt = v, dv/dt = (f-kx-bv)/m
+// (f - k*x - b*v)/m為加數度
 dvdt(t,x, v) {
   return (f - k*x - b*v)/m;
 }
