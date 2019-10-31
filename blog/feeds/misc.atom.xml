@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>cp2019 網際內容管理 40823125 - Misc</title><link href="https://40823125.github.io/cp2019/blog/" rel="alternate"></link><link href="https://40823125.github.io/cp2019/blog/feeds/misc.atom.xml" rel="self"></link><id>https://40823125.github.io/cp2019/blog/</id><updated>2019-10-30T11:00:00+08:00</updated><entry><title>2019 Fall CP 課程</title><link href="https://40823125.github.io/cp2019/blog/2019-Fall-Win10-1903.html" rel="alternate"></link><published>2019-10-30T11:00:00+08:00</published><updated>2019-10-30T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:40823125.github.io,2019-10-30:/cp2019/blog/2019-Fall-Win10-1903.html</id><summary type="html">&lt;p&gt;2019 Fall 一開始, 1903 版的 Windows 10 就大舉更新, 除了逐步去掉先前許多舊版的設定視窗, 也將系統的指令搜尋與 App 應用程式進行綁定. 許多採用可攜設定的程式執行流程, 隨著更新進程的推展, 必須因應修改才可以正常運作.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>cp2019 網際內容管理 40823125 - Misc</title><link href="https://40823125.github.io/cp2019/blog/" rel="alternate"></link><link href="https://40823125.github.io/cp2019/blog/feeds/misc.atom.xml" rel="self"></link><id>https://40823125.github.io/cp2019/blog/</id><updated>2019-10-30T11:00:00+08:00</updated><entry><title>2019 Fall CP 課程</title><link href="https://40823125.github.io/cp2019/blog/2019-Fall-Win10-1903.html" rel="alternate"></link><published>2019-10-30T11:00:00+08:00</published><updated>2019-10-30T11:00:00+08:00</updated><author><name>40823125</name></author><id>tag:40823125.github.io,2019-10-30:/cp2019/blog/2019-Fall-Win10-1903.html</id><summary type="html">&lt;p&gt;2019 Fall 一開始, 1903 版的 Windows 10 就大舉更新, 除了逐步去掉先前許多舊版的設定視窗, 也將系統的指令搜尋與 App 應用程式進行綁定. 許多採用可攜設定的程式執行流程, 隨著更新進程的推展, 必須因應修改才可以正常運作.
 &lt;!--PELICAN_END_SUMMARY--&gt;&lt;/p&gt;
-&lt;h2&gt;為何要使用可攜系統&lt;/h2&gt;
+&lt;h2&gt;為要使用可攜系統何&lt;/h2&gt;
 &lt;p&gt;自從 1995 年 Windows 95 與 Solidworks 95 在個人電腦中推出, 至今二十幾年, 幾乎所有與機械設計相關的單機套件的操作系統都在 Windows 上, 但是一旦需要建構所謂的 client-server 或雲端機械設計運算系統, 以 Ubuntu 為主的 Linux 伺服器顯然在成本與效益上, 擁有許多優勢. 因此長遠來看, 任何在 Windows 上操作的計算機運算流程, 都必須設法能夠在 Windows 與 Linux 上運作.&lt;/p&gt;
 &lt;p&gt;在 Windows 10 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;2019 Fall 一開始, 1903 版的 Windows 10 就大舉更新, 除了逐步去掉先前許多舊版的設定視窗, 也將系統的指令搜尋與 App 應用程式進行綁定. 許多採用可攜設定的程式執行流程, 隨著更新進程的推展, 必須因應修改才可以正常運作.
 &lt;!--PELICAN_END_SUMMARY--&gt;&lt;/p&gt;
-&lt;h2&gt;為何要使用可攜系統&lt;/h2&gt;
+&lt;h2&gt;為要使用可攜系統何&lt;/h2&gt;
 &lt;p&gt;自從 1995 年 Windows 95 與 Solidworks 95 在個人電腦中推出, 至今二十幾年, 幾乎所有與機械設計相關的單機套件的操作系統都在 Windows 上, 但是一旦需要建構所謂的 client-server 或雲端機械設計運算系統, 以 Ubuntu 為主的 Linux 伺服器顯然在成本與效益上, 擁有許多優勢. 因此長遠來看, 任何在 Windows 上操作的計算機運算流程, 都必須設法能夠在 Windows 與 Linux 上運作.&lt;/p&gt;
 &lt;p&gt;在 Windows 10 環境中使用可攜系統的原因, 主要是讓計算機程式課程中所使用的工具, 都可以放在 USB 3.0 規格以上的隨身碟或隨身硬碟上運作, 而第二個原因則是希望這些工具都能相容於 Linux 系統.&lt;/p&gt;
 &lt;h2&gt;Windows 10 更新所造成的問題&lt;/h2&gt;
