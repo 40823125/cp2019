@@ -11,6 +11,7 @@ rungeKutta(t0, x0, t, h) {
   int n = ((t - t0) / h).toInt();
   // 宣告 x 為雙浮點數, 且設為起始值 x0
   double x = x0;
+  print(" ${t.toStringAsFixed(3)} \t ${x.toStringAsFixed(3)} \t");
   // 利用已知的 t0, x0, t 終點值與步階增量值 h, 迭代求 x 對應值
   // 索引值 i 將每次增量 1, 從 i=1 執行 for 環圈至 i=n
   for (int i = 1; i <= n; i++) {
@@ -44,5 +45,5 @@ main() {
   num x = 1;
   num t = 2;
   double h = 3;
-  rungeKutta(t0.x0.t.h);
+  rungeKutta(t0,x0,t,h);
 }
