@@ -44,5 +44,5 @@ main() {
   num x = 1;
   num t = 2;
   double h = 3;
-  RungeKutta(t0.x0.t.h);
+  rungeKutta(t0.x0.t.h);
 }
