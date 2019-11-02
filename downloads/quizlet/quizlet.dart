@@ -24,6 +24,7 @@ rungeKutta(t0, x0, t, h) {
     // 每次 for 迴圈執行最後, 準備計算下一個步階增量後的 x 對應值
     // t 起始值配合步階增量值 h, 進行增量
     t0 = t0 + h;
+    print(" ${t.toStringAsFixed(3)} \t ${x.toStringAsFixed(3)} \t");
   }
   // 完成 for 迴圈迭代後, 傳回與 t 終點值對應的 x 值
   return x;
@@ -31,7 +32,7 @@ rungeKutta(t0, x0, t, h) {
 
 // 將微分方程式 "dx / dt = (t - x)/2" 定義為 dxdt 函式
 dxdt(t, x) {
-  return ((t - x) / 2);
+  return (5*x-3);
 }
 
 // 定義 main() 主函式內容, 目的在利用 rungeKutta 函式
@@ -42,6 +43,6 @@ main() {
   num t0 = 0;
   num x = 1;
   num t = 2;
-  double h = 0.2;
-  print('The value of x at t=$t is: ${rungeKutta(t0, x, t, h)}');
+  double h = 3;
+  RungeKutta(t0.x0.t.h);
 }
