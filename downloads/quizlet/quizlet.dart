@@ -42,7 +42,7 @@ main() {
 // Driver method
 // num 資料型別可以是整數或雙浮點數
   num t0 = 0;
-  num x = 1;
+  num x0 = 1;
   num t = 2;
   double h = 3;
   rungeKutta(t0,x0,t,h);
