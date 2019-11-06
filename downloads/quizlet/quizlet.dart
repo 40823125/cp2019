@@ -1,17 +1,17 @@
 // 下列 Dart 程式, 利用 Runge Kutta 迭代運算法, 解常微分方程式
 // 設 t 為時間, x 則設為物體的位移
-// dx / dt = (t - x)/2, 起始值 t0=0, x0=1, 求 t=2 時的 x 值
+// dx / dt = (5*x-3), 求 t=2 時的 x 值
 //
-// 已知起始值 t0 與 x0 後, 可以利用下列 rungeKutta 函式, 以
-// h 為每步階增量值, 求 dxdt 常微分方程式任一 t 的對應值 x
-// 定義函式 rungeKutta, 共有四個輸入變數
+// 可以利用下列 rungeKutta 函式, 以h 為每步階增量值
+// 求 dxdt 常微分方程式任一 t 的對應值 x
+// 定義函式 rungeKutta, 共有兩個輸入變數
 rungeKutta(t, h) {
   // 利用步階增量值 h 與 t 的起始及終點值
   // 計算需要迭代的次數 n
   int n = t / h;
-  // 宣告 x 為雙浮點數, 且設為起始值 x0
+  // 宣告 x 為雙浮點數, 且設為起始值 1
   double x = 1;
-  // 利用已知的 t0, x0, t 終點值與步階增量值 h, 迭代求 x 對應值
+  // t 終點值與步階增量值 h, 迭代求 x 對應值
   // 索引值 i 將每次增量 1, 從 i=1 執行 for 環圈至 i=n
   for (int i = 1; i <= n; i++) {
     // 將此階段的 t 與 x 值代入 dxdt 函式求下列四個浮點變數值
@@ -28,7 +28,7 @@ rungeKutta(t, h) {
   return x;
 }
 
-// 將微分方程式 "dx / dt = (t - x)/2" 定義為 dxdt 函式
+// 將微分方程式 "dx / dt = 5*x-3" 定義為 dxdt 函式
 dxdt(t, x) {
   return (5 * x - 3);
 }
@@ -39,6 +39,6 @@ main() {
 // Driver method
 // num 資料型別可以是整數或雙浮點數
   num t = 2;
-  num h = 2;
+  num h = 0.1;
   print('The value of dxdt at t=$t is: ${rungeKutta(t, h)}');
 }
