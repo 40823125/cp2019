@@ -3,7 +3,6 @@ import 'dart:math' as math;
 // 下列 Dart 程式, 利用 Runge Kutta 迭代運算法, 解常微分方程式
 // 設 t 為時間, x 則設為物體的位移
 // dx / dt = (7*y^2*x^3), 求 x=2 時的 dydx 值
-//
 // 可以利用下列 rungeKutta 函式, 以h 為每步階增量值
 // 求 dydx 常微分方程式任一 y 的對應值 x
 // 定義函式 rungeKutta, 共有兩個輸入變數
@@ -43,5 +42,20 @@ main() {
  // Driver method
 // num 資料型別可以是整數或雙浮點數
   num h = 0.1;
-  print('The value of dydx at y=$y is: ${rungeKutta(y, h)}');
+    double aSolution = 3;
+  // 定義誤差 % 值為 errPercent
+  double errPercent;
+  // 期望誤差 % 值, 定義為 expError, 設為 0.001 %
+  double expError = 0.001;
+  // 增量從 0.1 開始, 每次迴圈增量減半至誤差值小於 expError %
+  // 在期望條件尚未符合之前, 持續縮小增量值, 並且重複執行運算
+  do {
+    double nSolution = rungeKutta(y, h);
+    //print('t=$t, h=$h 時, 解析解答案為: $aSolution');
+    // 利用內建的 abs() 方法求誤差的絕對值
+    errPercent = (nSolution - aSolution) / nSolution.abs() * 100;
+    print('y=$y, h=$h 時, 數值解為: $nSolution, 誤差為: $errPercent %');
+    print('*' * 30);
+    h = h / 2;
+  } while (errPercent > expError);
 }
