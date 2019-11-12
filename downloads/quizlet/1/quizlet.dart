@@ -18,10 +18,10 @@ rungeKutta(x0, t, h) {
   // 索引值 i 將每次增量 1, 從 i=1 執行 for 環圈至 i=n
   for (int i = 1; i <= n; i++) {
     // 將此階段的 t 與 x 值代入 dxdt 函式求下列四個浮點變數值
-    double k1 = h * dxdt(t0, x);
-    double k2 = h * dxdt(t0 + 0.5 * h, x + 0.5 * k1);
-    double k3 = h * dxdt(t0 + 0.5 * h, x + 0.5 * k2);
-    double k4 = h * dxdt(t0 + h, x + k3);
+    double k1 = h * dxdt(t, x);
+    double k2 = h * dxdt(t + 0.5 * h, x + 0.5 * k1);
+    double k3 = h * dxdt(t + 0.5 * h, x + 0.5 * k2);
+    double k4 = h * dxdt(t + h, x + k3);
     // 利用上述四個變數值求此步階增量後的對應 x 值
     x = x + (1.0 / 6.0) * (k1 + 2 * k2 + 2 * k3 + k4);
     // 每次 for 迴圈執行最後, 準備計算下一個步階增量後的 x 對應值
