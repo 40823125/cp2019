@@ -43,7 +43,7 @@ main() {
 // 因為已知答案為 x(t) = C*math.exp(5*t) + 3/5
 // 假設 C = 1, 則 t = 0 時 x(0) = 8/5
 // num 資料型別可以是整數或雙浮點數
-  num x = 8 / 5;
+  num x0 = 8 / 5;
 // 求 t = 2 時 x(2) 數值分析解, 並與解析解進行比較
   num t = 2;
   double aSolution = math.exp(5 * 2)+ 3 / 5;
@@ -56,7 +56,7 @@ main() {
   // 增量從 0.1 開始, 每次迴圈增量減半至誤差值小於 expError %
   // 在期望條件尚未符合之前, 持續縮小增量值, 並且重複執行運算
   do {
-    double nSolution = rungeKutta(x, t, h);
+    double nSolution = rungeKutta(x0, t, h);
     //print('t=$t, h=$h 時, 解析解答案為: $aSolution');
     // 利用內建的 abs() 方法求誤差的絕對值
     errPercent = (aSolution - nSolution) / nSolution.abs() * 100;
