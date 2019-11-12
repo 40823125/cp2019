@@ -41,12 +41,12 @@ dxdt(t, x) {
 // 解常微分方程式
 main() {
 // 因為已知答案為 x(t) = C*math.exp(5*t) + 3/5
-// 假設 C = 2, 則 t = 0 時 x(0) = 8/5
+// 假設 C = 1, 則 t = 0 時 x(0) = 8/5
 // num 資料型別可以是整數或雙浮點數
   num x = 8 / 5;
 // 求 t = 2 時 x(2) 數值分析解, 並與解析解進行比較
   num t = 2;
-  double aSolution = math.exp(5 * 2)*2+ 3 / 5;
+  double aSolution = math.exp(5 * 2)+ 3 / 5;
   // 設起始增量值為 0.1
   double h = 0.1;
   // 定義誤差 % 值為 errPercent
