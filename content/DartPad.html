@@ -67,7 +67,7 @@
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-<!-- 啟用 LaTeX equations 編輯 -->
+<!-- for LaTeX equations 暫時不用
 <script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 <script type="text/javascript">
 init_mathjax = function() {
@@ -150,25 +150,9 @@ init_mathjax();
           
         </header>
     <div id="tipue_search_content">Develop << <a href='Develop.html'>Previous</a> <a href='Wed.html'>Next</a> >> Wed<br /><h1>DartPad</h1>
-            <!-- 透過 getDart(dirname) 取位於 downloads/dart_ex/ 目錄中 dirname 目錄中的 Dart 程式碼 -->
-<script>
-function getDart(dirname){
-    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823125&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
-    document.getElementById("iframe").src = source ;
-}
-function largest(){
-document.getElementById("iframe").width = document.body.clientWidth ;
-document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
-}
-function original(){
-document.getElementById("iframe").width = 800 ;
-document.getElementById("iframe").height = 600 ;
-}
-</script>
 <h4>純 Dart 程式</h4>
-<p><button onclick="getDart('hello')">Hello</button> <button onclick="getDart('for')">For Loop</button> <button onclick="getDart('loop')">loop</button> <button onclick="getDart('dxdt')">dxdt</button><button onclick="getDart('quizlet1')">quizlet1</button> <button onclick="getDart('quizlet2')">quizlet2</button></p>
-<p><button onclick="getDart('quizlet3')">quizlet3</button><button onclick="getDart(c,f')">c,f</button> <!-- 內建放入的 Dart 原始碼 --></p>
-<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p><button onclick="getDart('hello')">Hello</button> <button onclick="getDart('for')">For Loop</button><span> </span> <button onclick="getDart('loop')">loop</button><span> </span> <button onclick="getDart('dxdt')">dxdt</button><span> </span><button onclick="getDart('quizlet1')">quizlet1</button><span> </span> <button onclick="getDart('quizlet2')">quizlet2</button><span> </span> <button onclick="getDart('quizlet3')">quizlet3</button><span> </span><button onclick="getDart(c,f')">c,f</button></p>
+<p><button onclick="largest()">放大</button><span> </span> <button onclick="original()">回復</button></p>
 <p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/dxdt&amp;theme=dark" width="800"></iframe></p><br />Develop << <a href='Develop.html'>Previous</a> <a href='Wed.html'>Next</a> >> Wed</div>
         
     <!-- footer -->
