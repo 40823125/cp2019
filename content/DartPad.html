@@ -158,12 +158,12 @@ function getDart(dirname){
 
 function getHtmlDart(dirname){
     source = "https://dartpad.github.io/embed-html.html?gh_owner=40823125&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
-document.getElementById("iframe").src = source ;
+    document.getElementById("iframe").src = source ;
 }
 
 function getFlutter(dirname){
     source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823125&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
-document.getElementById("iframe").src = source ;
+    document.getElementById("iframe").src = source ;
 }
 
 }
@@ -176,7 +176,7 @@ document.getElementById("iframe").width = 800 ;
 document.getElementById("iframe").height = 600 ;
 }
 </script>
-<h4>純 Dart 程式</h4>
+<h4>Dart 程式</h4>
 <p><button onclick="getDart('hello')">Hello</button> <button onclick="getDart('loop')">loop</button> <button onclick="getDart('dxdt')">dxdt</button> <button onclick="getDart('quizlet1')">quizlet1</button> <button onclick="getDart('quizlet2')">quizlet2</button> <button onclick="getDart('quizlet3')">quizlet3</button> <button onclick="getDart('cf')">cf</button></p>
 <h4>Html 程式</h4>
 <p><button onclick="getHtmlDart('roc_flag')">ROC Flag</button> <button onclick="getHtmlDart('grid')">Grid</button> <button onclick="getHtmlDart('xyplot')">X-Y Plot</button> <button onclick="getHtmlDart('slithery')">Slithery</button></p>
