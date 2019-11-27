@@ -1,15 +1,25 @@
 /*40823125
-int rabbitCount = 0;
-const int NO_YEARS = 10;
-const int GROWTH_FACTOR = 15;
-int calculateRabbits(int years) {
-  return ((9/5)*c+32)
+import "dart:html";
+void main() {
+  querySelector("#submit").onClick.listen((e) => calcRabbits());
+}
+calcRabbits() {
+  // binding variables to html elements:
+  InputElement cInput = querySelector("#c");
+  LabelElement output = querySelector("#output");
+  // getting input
+  String cString = cInput.value;
+  int c = int.parse(cString);
+  // calculating and setting output:
+  output.innerHtml = "${calculateRabbits(c)}";
+}
+int calculateRabbits(int c) {
+   return ((9/5)*c+32)
       .round()
       .toInt();
 }
 */
 import "dart:html";
-const int GROWTH_FACTOR = 15;
 void main() {
   querySelector("#submit").onClick.listen((e) => calcRabbits());
 }
