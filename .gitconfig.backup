@@ -1,3 +1,6 @@
+[user]
+	name = 40823125
+    email = 40823125@gm.nfu.edu.tw
 [merge]
 	tool = kdiff3
 [diff]
