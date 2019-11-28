@@ -88,7 +88,7 @@ init_mathjax = function() {
 }
 init_mathjax();
 </script>
--->
+
 <!-- 暫時不用
 <script src="./../cmsimde/static/fengari-web.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
@@ -99,6 +99,11 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
 </head>
 <body>
@@ -174,14 +179,15 @@ document.getElementById("iframe").height = 600 ;
 }
 </script>
 <h4>Dart 程式</h4>
-<p><button onclick="getDart('hello')">Hello</button> <button onclick="getDart('loop')">loop</button> <button onclick="getDart('dxdt')">dxdt</button> <button onclick="getDart('quizlet1')">quizlet1</button> <button onclick="getDart('quizlet2')">quizlet2</button> <button onclick="getDart('quizlet3')">quizlet3</button> <button onclick="getDart('cf')">cf</button></p>
+<p><button onclick="getDart('main')">main</button><button onclick="getDart('hello')">Hello</button> <button onclick="getDart('loop')">loop</button> <button onclick="getDart('dxdt')">dxdt</button> <button onclick="getDart('quizlet1')">quizlet1</button> <button onclick="getDart('quizlet2')">quizlet2</button> <button onclick="getDart('quizlet3')">quizlet3</button> <button onclick="getDart('cf')">cf</button><button onclick="getDart('list string')">list string</button></p>
 <h4>Html 程式</h4>
 <p><button onclick="getHtmlDart('roc_flag')">ROC Flag</button> <button onclick="getHtmlDart('grid')">Grid</button> <button onclick="getHtmlDart('xyplot')">X-Y Plot</button> <button onclick="getHtmlDart('slithery')">Slithery</button> <button onclick="getHtmlDart('c,f')">cf</button></p>
 <h4>Flutter 程式</h4>
 <p><button onclick="getFlutter('flutter1')">Flutter1</button> <button onclick="getFlutter('flutter2')">Flutter2</button> <button onclick="getFlutter('flutter3')">Flutter3</button></p>
 <!-- 內建放入的 Dart 原始碼 -->
 <p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
-<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/dxdt&amp;theme=dark" width="800"></iframe></p><br />Develop << <a href='Develop.html'>Previous</a> <a href='Wed.html'>Next</a> >> Wed</div>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/dxdt&amp;theme=dark" width="800"></iframe></p>
+<p><br/>Develop &lt;&lt; <a href="/get_page/DartPad/Develop.html">Previous</a> <a href="/get_page/DartPad/Wed.html">Next</a> &gt;&gt; Wed</p><br />Develop << <a href='Develop.html'>Previous</a> <a href='Wed.html'>Next</a> >> Wed</div>
         
     <!-- footer -->
       <div class="container">
@@ -223,4 +229,4 @@ document.getElementById("iframe").height = 600 ;
             -->
             <script src="../cmsimde/static/chimper/js/main.js"></script>
         </body></html>
-        
+       
