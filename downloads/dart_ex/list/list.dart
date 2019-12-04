@@ -37,11 +37,11 @@ void main() {
      output.innerHtml ="華氏$number度=攝氏${F(number).toStringAsFixed(3)}度";
     }
   else {
-     output.innerHtml ="當最後的數值為C時,推送C的數值";
+     output.innerHtml ="請輸入數字加上 C 或 F!";
 }
 }
 /*
 當最後一個字元為C時,推送C的數值 
 當最後一個字元為F時,推送F的數值  
-都不是時,推送當最後的數值為C時,推送C的數值 
+都不是時,推送請輸入數字加上 C 或 F!
 */
