@@ -155,7 +155,40 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">W10 << <a href='W10.html'>Previous</a> <a href='Wed.html'>Next</a> >> Wed<br /><h1>W12</h1>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/dNz3WwZzQKI" width="560"></iframe></p><br />W10 << <a href='W10.html'>Previous</a> <a href='Wed.html'>Next</a> >> Wed</div>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/dNz3WwZzQKI" width="560"></iframe></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">main(){  
+//字串temp40C,80C,50F,40C,25F
+ List temp = ["40C", "80C", "50F", "40C", "25F"];
+  for (var i in temp) {
+    if (i[2] == "C") {
+    print(i); 
+    var a = int.parse(i[0]+i[1]);
+    double k=(9/5)*a+32;
+    print(k);
+}
+    else{
+    print(i); 
+    var y = int.parse(i[0]+i[1]);
+    double m=(y-32)*5/9;
+    print(m);
+/*
+ for迴圈使i=temp
+ if當i字串第三個字是C時,執行
+    print(i);
+    var a = int.parse(i[0]+i[1]);
+    double k=(9/5)*a+32;
+    print(k);
+  else否時,執行
+    print(i); 
+    var y = int.parse(i[0]+i[1]);
+    double m=(y-32)*5/9;
+    print(m);
+ */
+}
+}
+}   
+</pre>
+<p></p><br />W10 << <a href='W10.html'>Previous</a> <a href='Wed.html'>Next</a> >> Wed</div>
         
     <!-- footer -->
       <div class="container">
