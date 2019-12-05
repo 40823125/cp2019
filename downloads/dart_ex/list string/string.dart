@@ -5,25 +5,22 @@ main(){
   var a = int.parse(i[0]+i[1]);
   //將字串轉數字
     if (i[2] == "C") {
-    print(i); 
     double k=(9/5)*a+32;
-    print("$k F");
+    print("攝氏$i度=華氏$k度");
 }
-    else{
-    print(i); 
+    else{ 
     double m=(a-32)*5/9;
-    print("$m C");
+    print("攝氏$i度=華氏$m度");
+
+}
+}
 /*
  for迴圈使i=temp
  if當i字串第三個字是C時,執行
-    print(i);
     double k=(9/5)*a+32;
-    print(k);
+    print("攝氏$i度=華氏$k度");
   else否時,執行
-    print(i); 
     double m=(y-32)*5/9;
-    print(m);
+    print("攝氏$i度=華氏$m度");
  */
 }
-}
-}  
