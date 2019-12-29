@@ -9,8 +9,6 @@ int flagw = 250;
 int flagh = 200;
 num x = flagw / 18;
 num y = flagh / 18;
-num star = flagw / 50;
-num angle = 120;
 Timer timer;
 num rotAngle = 0;
 num incAngle = 0;
@@ -37,9 +35,11 @@ void rotROC() {
 
 
 void drawUSA(ctx) {
+  ctx.clearRect(0, 0, flagw, flagh);
   num d=15.4;
   num b=90;
-  num c=10;
+  num star = flagw / 50;
+  num angle = 120;
   ctx.clearRect(0, 0, flagw, flagh);
   ctx.fillStyle = 'rgb(255, 0, 0)';
   ctx.fillRect(0, 0, flagw, flagh);
@@ -78,12 +78,12 @@ void drawUSA(ctx) {
 }
 }
   else{
-  num a=-20;
+  num a=-10;
   for (int i = 0; i < 5; i++) {
   a+=20;
   for (int i = 0; i < 5; i++) {
   angle += 5 * Math.pi * 2 / 12;
-  num toX = (x+a+c) + Math.cos(angle+ rotAngle) * star;
+  num toX = (x+a) + Math.cos(angle+ rotAngle) * star;
   num toY = (y+b) + Math.sin(angle+ rotAngle) * star;
   // 只有 i 為 0 時移動到 toX, toY, 其餘都進行 lineTo
   if (i != 0)

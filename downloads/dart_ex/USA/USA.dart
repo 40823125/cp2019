@@ -7,8 +7,6 @@ int flagw = 250;
 int flagh = 200;
 num x = flagw / 18;
 num y = flagh / 18;
-num star = flagw / 50;
-num angle = 120;
 
 void main() {
   canvas = querySelector('#canvas');
@@ -53,9 +51,12 @@ polygon(ctx, x, y, radius, sides, startAngle, anticlockwise) {
 }
 
 void drawUSA(ctx) {
+  ctx.clearRect(0, 0, flagw, flagh);
   num d=15.4;
   num b=90;
   num c=10;
+  num star = flagw / 50;
+  num angle = 120;
   ctx.clearRect(0, 0, flagw, flagh);
   ctx.fillStyle = 'rgb(255, 0, 0)';
   ctx.fillRect(0, 0, flagw, flagh);
