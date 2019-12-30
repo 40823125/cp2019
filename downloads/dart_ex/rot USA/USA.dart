@@ -39,7 +39,6 @@ void drawUSA(ctx) {
   num d=15.4;
   num b=90;
   num star = flagw / 50;
-  num angle = 120;
   ctx.clearRect(0, 0, flagw, flagh);
   ctx.fillStyle = 'rgb(255, 0, 0)';
   ctx.fillRect(0, 0, flagw, flagh);
@@ -62,6 +61,7 @@ void drawUSA(ctx) {
   for (int i = 0; i < 9; i++) { 
   b-=10;
   if(i %2==0){
+  num angle = 120;
   num a=-20;
   for (int i = 0; i < 6; i++) {
   a+=20;
@@ -80,6 +80,7 @@ void drawUSA(ctx) {
   else{
   num a=-10;
   for (int i = 0; i < 5; i++) {
+  num angle = 120;
   a+=20;
   for (int i = 0; i < 5; i++) {
   angle += 5 * Math.pi * 2 / 12;
