@@ -1,15 +1,19 @@
+//開啟html的檔案
 import 'dart:html';
+//開啟數學的檔案
 import 'dart:math' as Math;
-
+//設定畫布的形式
 CanvasElement canvas;
 CanvasRenderingContext2D ctx;
+//設定畫布尺寸
 int flagw = 250;
-int flagh = 200;
+int flagh = 206;
 
 void main() {
   canvas = querySelector('#canvas');
   ctx = canvas.getContext('2d');
   drawUSA(ctx);
+  //設定按鈕對應的畫布
   querySelector("#usa").onClick.listen((e) => drawUSA(ctx));
   querySelector("#roc").onClick.listen((e) => drawROC(ctx));
   querySelector("#button").onClick.listen((e) => clearCanvas());
@@ -49,23 +53,34 @@ polygon(ctx, x, y, radius, sides, startAngle, anticlockwise) {
 
 }
 
+//台灣國旗
 void drawROC(ctx){
+  //x軸位置
   num x = flagw / 4;
+  //y軸位置
   num y = flagh / 4;
   // 先畫滿地紅
+  //清空畫布
   ctx.clearRect(0, 0, flagw, flagh);
+  //顏色設定
   ctx.fillStyle = 'rgb(255, 0, 0)';
+  //畫的位置
   ctx.fillRect(0, 0, flagw, flagh);
   // 再畫青天
+  //顏色設定
   ctx.fillStyle = 'rgb(0, 0, 150)';
+  //畫的位置
   ctx.fillRect(0, 0, flagw / 2, flagh / 2);
   // 畫十二道光芒白日
   ctx.beginPath();
   num star = flagw / 8;
   num angle = 0;
   for (int i = 0; i < 25; i++) {
+    //角度=angle+(5 * Math.pi * 2 / 12)
     angle += 5 * Math.pi * 2 / 12;
+    //toX = (位置+角度*圖形大小)
     num toX = x + Math.cos(angle) * star;
+    //toY = (位置+角度*圖形大小)
     num toY = y + Math.sin(angle) * star;
     // 只有 i 為 0 時移動到 toX, toY, 其餘都進行 lineTo
     if (i != 0)
@@ -93,6 +108,7 @@ void drawROC(ctx){
   ctx.fill();
 }
 
+//美國國旗
 void drawUSA(ctx) {
   ctx.clearRect(0, 0, flagw, flagh);
   num x = flagw / 18;
@@ -101,13 +117,19 @@ void drawUSA(ctx) {
   num d=15.4;
   num b=90;
   num c=10;
+  //清空畫布
   ctx.clearRect(0, 0, flagw, flagh);
+  //顏色設定
   ctx.fillStyle = 'rgb(255, 0, 0)';
+  //畫的位置
   ctx.fillRect(0, 0, flagw, flagh);
   for(int i=0;i<8;i++){
+  //只有i不等於0時執行
   if(i!=0){ 
   d+=31;
+  //顏色設定
   ctx.fillStyle = 'rgb(255, 255, 255)';
+  //畫的位置 
   ctx.fillRect(0, d, flagw, flagh / 13);
 }
   else{
@@ -118,18 +140,25 @@ void drawUSA(ctx) {
   ctx.fillRect(0, 200.4, flagw, flagh / 13);
   ctx.fillStyle = 'rgb(0, 0, 150)';
   ctx.fillRect(0, 0, flagw / 2, flagh / 1.9);
-  // 畫十二道光芒白日
+  // 畫50顆星星
   ctx.beginPath();
   for (int i = 0; i < 9; i++) { 
+  //b=b-10
   b-=10;
+  //只有i被2整除時執行
   if(i %2==0){
   num a=-20;
+  //重複執行直到i=6時停止
   for (int i = 0; i < 6; i++) {
   num angle = 120;
   a+=20;
+  //重複執行直到i=5時停止
   for (int i = 0; i < 5; i++) {
+  //角度=angle+(5 * Math.pi * 2 / 12)
   angle += 5 * Math.pi * 2 / 12;
+  //toX = (位置+角度*圖形大小)
   num toX = (x+a) + Math.cos(angle) * star;
+  //toY = (位置+角度*圖形大小)
   num toY = (y+b) + Math.sin(angle) * star;
   // 只有 i 為 0 時移動到 toX, toY, 其餘都進行 lineTo
   if (i != 0)
@@ -163,6 +192,7 @@ void drawUSA(ctx) {
   ctx.fill();
 }
 
+//畫布清空
 void clearCanvas() {
   ctx.clearRect(0, 0, flagw, flagh);
 }
