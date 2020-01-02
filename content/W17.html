@@ -175,13 +175,18 @@ document.getElementById("iframe").height = 600 ;
 }
 </script>
 <h4>Dart 程式</h4>
-<p><button onclick="getDart('cf')">temperature</button> <button onclick="getDart('list string')">temperature string</button></p>
+<p><button onclick="getDart('kg,ib')">kg ib</button></p>
 <h4>Html 程式</h4>
-<p><button onclick="getHtmlDart('rot USA')">rot USA Flag</button> <button onclick="getHtmlDart('USA')">USA Flag</button> <button onclick="getHtmlDart('c,f')">temperature</button> <button onclick="getHtmlDart('list')">temperature string</button></p>
+<p><button onclick="getHtmlDart('kg ib')">kg ib</button></p>
 <!-- 內建放入的 Dart 原始碼 -->
 <p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
 <p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/cf&amp;theme=dark" width="800"></iframe></p>
-<p><br/>W14 &lt;&lt; <a href="/get_page/W17/W14.html">Previous</a> <a href="/get_page/W17/Wed.html">Next</a> &gt;&gt; Wed</p><br />W16 << <a href='W16.html'>Previous</a> <a href='Wed.html'>Next</a> >> Wed</div>
+<p>輸入所要轉換的溫度 <input id="F" max="125" min="-40" type="string" value="25kg"/> <input id="submit" type="button" value="轉換"/> 轉換結果: <label id="output"></label></p>
+<script src="./../downloads/dart_ex/kg ib/kg,ib.js"></script>
+<div id="wrapper"><canvas height="200" id="canvas" width="300"></canvas> <button id="button">Clear Canvas</button> <button id="jap">Draw Jap</button> <button id="roc">Draw ROC</button> <button id="fra">Draw Fra</button> <button id="rus">Draw Rus</button> <button id="usa">Draw Usa</button> <button id="uk">Draw Uk</button> <button id="ger">Draw Ger</button> <button id="net">Draw Net</button></div>
+<p>
+<script src="./../downloads/dart_ex/USA/Flag.js"></script>
+</p><br />W16 << <a href='W16.html'>Previous</a> <a href='Wed.html'>Next</a> >> Wed</div>
         
     <!-- footer -->
       <div class="container">
