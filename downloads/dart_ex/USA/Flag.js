@@ -3383,7 +3383,7 @@
   N.main_closure7.prototype = {
     call$1: function(e) {
       H.interceptedTypeCheck(e, "$isMouseEvent");
-      $.ctx.clearRect(0, 0, 250, 206);
+      $.ctx.clearRect(0, 0, 1000, 1000);
       return;
     },
     $signature: 0

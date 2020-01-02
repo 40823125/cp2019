@@ -352,5 +352,5 @@ void drawUk(ctx){
 }
 //畫布清空
 void clearCanvas() {
-  ctx.clearRect(0, 0, flagw, flagh);
+  ctx.clearRect(0, 0, 1000, 1000);
 }
