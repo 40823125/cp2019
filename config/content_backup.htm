@@ -13,12 +13,215 @@
 <p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<h1>DartPad</h1>
-<h4>純 Dart 程式</h4>
-<p><button onclick="getDart('hello')">Hello</button> <button onclick="getDart('for')">For Loop</button> <button onclick="getDart('loop')">loop</button> <button onclick="getDart('dxdt')">dxdt</button><button onclick="getDart('quizlet1')">quizlet1</button> <button onclick="getDart('quizlet2')">quizlet2</button></p>
-<p><button onclick="getDart('quizlet3')">quizlet3</button><button onclick="getDart(c,f')">c,f</button> <!-- 內建放入的 Dart 原始碼 --></p>
+<h1>Week任務</h1>
+<h2>W7</h2>
+<p><img alt="" height="245" src="/images/EXCEL_TrEMBcSKX9.png" width="400"/><img alt="" height="240" src="/images/EXCEL_ZbwcHpT4h6.png" width="400"/></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">// 下列 Dart 程式, 利用 Runge Kutta 迭代運算法, 解常微分方程式
+// 設 t 為時間, x 則設為物體的位移
+// 假設要解 F=ma 的單一質量加上彈簧 (常數為 k) 與黏滯阻尼 (常數為 b)
+// f 為沿位移方向的施力
+// dx/dt = v, dv/dt = (f-kx-bv)/m
+// dx / dt = (t - x)/2, 起始值 t0=0, x0=1, 求 t=2 時的 x 值
+// 已知起始值 t0 與 x0 後, 可以利用下列 rungeKutta 函式
+// 以h為每步階增量值, 求 dxdt 常微分方程式任一 t 的對應值 x
+// 定義函式 rungeKutta, 共有四個輸入變數
+// 物體質量
+const num m = 1;
+// 對質量的施力 f
+const num f = 0.0;
+// 彈簧係數
+const num k = 1;
+// 阻尼係數
+const num b = 1;
+
+// 呼叫運算時, 需要起始時間, 終點時間, 位移起始值與速度起始值, 增量 h
+rungeKutta(t0, x0, v0, t, h) {
+  // 利用步階增量值 h 與 t 的起始及終點值
+  // 計算需要迭代的次數 n
+  int n = ((t - t0) / h).toInt();
+  // 宣告 x 為雙浮點數, 且設為起始值 x0
+  double x = x0;
+  // 宣告 v 為雙浮點數, 且設為起始值 v0
+  double v = v0;
+  //宣告t0 = 0.000 x = 1.000 v = 0.000 後進入迴圈
+  // \t 為不顯示前一個的代號
+  print(" ${t0.toStringAsFixed(3)}\t ${x.toStringAsFixed(3)}\t ${v.toStringAsFixed(3)}\t");
+  // 利用已知的 t0, x0, t 終點值與步階增量值 h, 迭代求 x 對應值
+  // 索引值 i 將每次增量 1, 從 i=1 執行 for 環圈至 i=n
+  for (int i = 1; i &lt;= n; i++) {
+    // 將此階段的 t 與 x 值代入 dxdt 與 dvdt 函式求下列四個浮點變數值
+    // 因為必須兩個函式耦合, 必須同時計算
+    double xk1 = h * dxdt(t0, x, v);
+    double vk1 = h * dvdt(t0, x, v);
+    double xk2 = h * dxdt(t0 + 0.5 * h, x + 0.5 * xk1, v + 0.5 * vk1);
+    double vk2 = h * dvdt(t0 + 0.5 * h, x + 0.5 * xk1, v + 0.5 * vk1);
+    double xk3 = h * dxdt(t0 + 0.5 * h, x + 0.5 * xk2, v + 0.5 * vk2);
+    double vk3 = h * dvdt(t0 + 0.5 * h, x + 0.5 * xk2, v + 0.5 * vk2);
+    double xk4 = h * dxdt(t0 + h, x + xk3, v + vk3);
+    double vk4 = h * dvdt(t0 + h, x + xk3, v + vk3);
+    // 利用上述四個變數值求此步階增量後的對應 x 值
+    x = x + (1.0 / 6.0) * (xk1 + 2 * xk2 + 2 * xk3 + xk4);
+    v = v + (1.0 / 6.0) * (vk1 + 2 * vk2 + 2 * vk3 + vk4);
+    
+    // 每次 for 迴圈執行最後, 準備計算下一個步階增量後的 x 對應值
+    // t 起始值配合步階增量值 h, 進行增量
+    t0 = t0 + h;
+    // 宣告計算結果
+    // toStringAsFixed(3)為只列到小數點第三位
+    print(" ${t0.toStringAsFixed(3)}\t ${x.toStringAsFixed(3)}\t ${v.toStringAsFixed(3)}\t");
+  }
+  // 完成 for 迴圈迭代後, 傳回與 t 終點值對應的 x 值
+  return [x, v];
+}
+
+// 將微分方程式 "dx / dt = v" 定義為 dxdt 函式
+dxdt(t, x, v) {
+  return v;
+}
+// dx/dt = v, dv/dt = (f-kx-bv)/m
+// (f - k*x - b*v)/m為加數度
+dvdt(t,x, v) {
+  return (f - k*x - b*v)/m;
+}
+
+// 定義 main() 主函式內容, 目的在利用 rungeKutta 函式
+// 解常微分方程式
+main() {
+// Driver method
+// num 資料型別可以是整數或雙浮點數
+  num t0 = 0;
+  num x0 = 1;
+  num v0 = 0;
+  num t = 16;
+  double h = 0.1;
+  rungeKutta(t0, x0, v0, t, h);
+}</pre>
+<p></p><h2>W10</h2>
+<!-- 透過 getDart(dirname) 取位於 downloads/dart_ex/ 目錄中 dirname 目錄中的 Dart 程式碼 -->
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823125&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823125&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823125&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<h4>Dart 程式</h4>
+<p><button onclick="getDart('main')">main</button> <button onclick="getDart('hello')">Hello</button> <button onclick="getDart('loop')">loop</button> <button onclick="getDart('dxdt')">dxdt</button> <button onclick="getDart('quizlet1')">quizlet1</button> <button onclick="getDart('quizlet2')">quizlet2</button> <button onclick="getDart('quizlet3')">quizlet3</button> <button onclick="getDart('cf')">temperature</button> <button onclick="getDart('list string')">temperature string</button> <button onclick="getDart('kg,ib')">kg,ib</button></p>
+<h4>Html 程式</h4>
+<p><button onclick="getHtmlDart('roc_flag')">ROC Flag</button> <button onclick="getHtmlDart('grid')">Grid</button> <button onclick="getHtmlDart('xyplot')">X-Y Plot</button> <button onclick="getHtmlDart('slithery')">Slithery</button> <button onclick="getHtmlDart('c,f')">temperature</button> <button onclick="getHtmlDart('list')">temperature string</button> <button onclick="getHtmlDart('USA')">USA Flag</button> <button onclick="getHtmlDart('rot USA')">rot USA Flag</button> <button onclick="getHtmlDart('kg ib')">kgib</button></p>
+<h4>Flutter 程式</h4>
+<p><button onclick="getFlutter('flutter1')">Flutter1</button> <button onclick="getFlutter('flutter2')">Flutter2</button> <button onclick="getFlutter('flutter3')">Flutter3</button></p>
+<!-- 內建放入的 Dart 原始碼 -->
 <p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
-<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/dxdt&amp;theme=dark" width="800"></iframe></p><h1>Wed</h1>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/dxdt&amp;theme=dark" width="800"></iframe></p><h2>W12</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/dNz3WwZzQKI" width="560"></iframe></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false"> List temp = ["40C", "80C", "50F", "40C", "25F"];
+  for (var i in temp) {
+    if (i[2] == "C") {
+    print(i); 
+    var a = int.parse(i[0]+i[1]);
+    double k=(9/5)*a+32;
+    print(k);
+}
+    else{
+    print(i); 
+    var y = int.parse(i[0]+i[1]);
+    double m=(y-32)*5/9;
+    print(m);
+/*
+ for迴圈使i=temp
+ if當i字串第三個字是C時,執行
+    print(i);
+    var a = int.parse(i[0]+i[1]);
+    double k=(9/5)*a+32;
+    print(k);
+  else否時,執行
+    print(i); 
+    var y = int.parse(i[0]+i[1]);
+    double m=(y-32)*5/9;
+    print(m);
+ */
+}
+}
+}  </pre>
+<h2>W13</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/yMqc_f37ZDY" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/l2q1lOKae10" width="560"></iframe></p><h2>W14</h2>
+<p>輸入所要轉換的溫度 <input id="F" max="125" min="-40" type="string" value="25F"/> <input id="submit" type="button" value="轉換"/> 轉換結果: <label id="output"></label></p>
+<script src="/downloads/dart_ex/list/list.js"></script><h2>W16</h2>
+<!-- 透過 getDart(dirname) 取位於 downloads/dart_ex/ 目錄中 dirname 目錄中的 Dart 程式碼 -->
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823125&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823125&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<h4>Dart 程式</h4>
+<p><button onclick="getDart('cf')">temperature</button> <button onclick="getDart('list string')">temperature string</button></p>
+<h4>Html 程式</h4>
+<p><button onclick="getHtmlDart('USA')">USA Flag</button> <button onclick="getHtmlDart('c,f')">temperature</button> <button onclick="getHtmlDart('list')">temperature string</button></p>
+<!-- 內建放入的 Dart 原始碼 -->
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/cf&amp;theme=dark" width="800"></iframe></p>
+<p><br/>W14 &lt;&lt; <a href="/get_page/W16/W14.html">Previous</a> <a href="/get_page/W16/Wed.html">Next</a> &gt;&gt; Wed</p><h2>W17</h2>
+<!-- 透過 getDart(dirname) 取位於 downloads/dart_ex/ 目錄中 dirname 目錄中的 Dart 程式碼 -->
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823125&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823125&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<h4>Dart 程式</h4>
+<p><button onclick="getDart('kg,ib')">kg ib</button></p>
+<h4>Html 程式</h4>
+<p><button onclick="getHtmlDart('kg.ib')">kg ib</button> <button onclick="getHtmlDart('USA')">Flag</button></p>
+<!-- 內建放入的 Dart 原始碼 -->
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/cf&amp;theme=dark" width="800"></iframe></p>
+<p>輸入所要轉換的溫度 <input id="F" max="125" min="-40" type="string" value="25kg"/> <input id="submit" type="button" value="轉換"/> 轉換結果: <label id="output"></label></p>
+<script src="/downloads/dart_ex/kg ib/kg,ib.js"></script>
+<div id="wrapper"><canvas height="200" id="canvas" width="300"></canvas> <button id="button">Clear Canvas</button> <button id="jap">Draw Jap</button> <button id="roc">Draw ROC</button> <button id="fra">Draw Fra</button> <button id="rus">Draw Rus</button> <button id="usa">Draw Usa</button> <button id="uk">Draw Uk</button> <button id="ger">Draw Ger</button> <button id="net">Draw Net</button></div>
+<p>
+<script src="/downloads/dart_ex/USA/Flag.js"></script>
+</p><h1>Wed</h1>
 <ul>
 <li>Cloud</li>
 </ul>

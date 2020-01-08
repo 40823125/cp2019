@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
 <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
-<leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
-<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
-	<global_window_position top="50" left="50" height="500" width="700"/>
-	<global_log_window_position top="0" left="0" height="0" width="0"/>
-</globals>
+<leo_header file_format="2"/>
+<globals/>
 <preferences/>
 <find_panel_settings/>
 <vnodes>
@@ -13,28 +10,28 @@
 <v t="leo.20180902120538.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="leo.20180902120538.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
-<v t="leo.20180902120523.1" a="E"><vh>編輯 reveal</vh>
-<v t="leo.20180902120523.2" a="E"><vh>@path ./../reveal</vh>
-<v t="leo.20180902120523.3" a="E"><vh>@clean index.html</vh>
-<v t="leo.20180902120523.4" a="E"><vh>html</vh>
+<v t="leo.20180902120523.1"><vh>編輯 reveal</vh>
+<v t="leo.20180902120523.2"><vh>@path ./../reveal</vh>
+<v t="leo.20180902120523.3"><vh>@clean index.html</vh>
+<v t="leo.20180902120523.4"><vh>html</vh>
 <v t="leo.20180902120523.5"><vh>head</vh></v>
-<v t="leo.20180902120523.6" a="E"><vh>body</vh>
-<v t="leo.20180902120523.7" a="E"><vh>reveal div</vh>
-<v t="leo.20180902120523.8" a="E"><vh>slides div</vh>
-<v t="leo.20180902120523.9" a="E"><vh>封面投影片</vh>
+<v t="leo.20180902120523.6"><vh>body</vh>
+<v t="leo.20180902120523.7"><vh>reveal div</vh>
+<v t="leo.20180902120523.8"><vh>slides div</vh>
+<v t="leo.20180902120523.9"><vh>封面投影片</vh>
 <v t="leo.20180902120523.10"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20180902120523.11" a="E"><vh>快捷鍵</vh>
+<v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
 </v>
 <v t="leo.20180902120523.13"><vh>各式內容引用範例</vh>
-<v t="leo.20180902120523.14" a="E"><vh>導入數學符號與方程式</vh>
+<v t="leo.20180902120523.14"><vh>導入數學符號與方程式</vh>
 <v t="leo.20180902120523.15"><vh>LaTeX 格式方程式</vh></v>
 </v>
-<v t="leo.20180902120523.16" a="E"><vh>導入縮排程式碼</vh>
+<v t="leo.20180902120523.16"><vh>導入縮排程式碼</vh>
 <v t="leo.20180902120523.17"><vh>引用程式碼</vh></v>
 </v>
-<v t="leo.20180902120523.18" a="E"><vh>導入影片</vh>
+<v t="leo.20180902120523.18"><vh>導入影片</vh>
 <v t="leo.20180902120523.19"><vh>iframe 導入影片</vh></v>
 </v>
 </v>
@@ -48,15 +45,13 @@
 </vnodes>
 <tnodes>
 <t tx="leo.20180902120523.1"></t>
-<t tx="leo.20180902120523.10">## CMSimfly 網際內容管理
-
-### KMOLab
+<t tx="leo.20180902120523.10">##  Computer Programming 40823125
 
 &lt;small&gt;
-Created by [KMOLab](http://lab.kmol.info/)
+Created by [40823125](http://lab.kmol.info/)
 &lt;/small&gt;
 
-[CMSimfly 網誌](./../blog/index.html)
+[計算機程式的簡報](./../blog/index.html)
 
 
 </t>
@@ -170,7 +165,7 @@ make.start()
 <t tx="leo.20180902120523.5">&lt;head&gt;
     &lt;meta charset="utf-8"&gt;
 &lt;title&gt;
-CMSimfly 網際內容管理
+40823125的簡報
 &lt;/title&gt;
     &lt;meta name="description" content="A framework for easily creating beautiful presentations using HTML"&gt;
     &lt;meta name="author" content="Hakim El Hattab"&gt;
@@ -202,7 +197,219 @@ CMSimfly 網際內容管理
 
 </t>
 <t tx="leo.20180902120523.6">&lt;body&gt;
-@others
+&lt;div class="reveal"&gt;
+&lt;!-- Any section element inside of this container is displayed as a slide --&gt;
+&lt;div class="slides"&gt;
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+## Computer Programming 40823125
+
+
+&lt;small&gt;
+Created by [40823125](http://lab.kmol.info/)
+&lt;/small&gt;
+
+[cp2019](./../blog/index.html)
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第一周
+* 介紹可攜系統，並且介紹dart程式
+* 講解學習這門課的主要目的與將來的去向與使用
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第二週
+* 學習到瞭如何建立github網站，並且建立一個倉儲 
+* 學會瞭如何使用近端和遠端系統
+* 學習一些dart的基礎程式指令
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第三週
+* 用gist建立dartpad指令
+* 學習如何使用paoxy進行網路連接
+&lt;iframe src="https://dartpad.dev/embed-html.html?id=9caaacaa5e7df4990fce8540997f7276&amp;split=80&amp;theme=dark&gt;&lt;/iframe&gt;
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第四周
+* 開始使用遠端系統編輯網頁，並進行可攜系統推送
+* 在遠端系統添加圖片
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第五週
+* 上課觀看老師影碟，並學習相關知識
+* 進行網頁自主更新與推送新東西
+
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第六週
+* 將dartpad程式推送到github，用gist 並利用iframe將dartpad嵌入個人網站上
+&lt;iframe width="400" height="300" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/hello&amp;amp;theme=dark"&gt;&lt;/iframe&gt;
+* 使用並學會何為for和main的主函式
+&lt;iframe src="https://dartpad.github.io" width="400" height="500"&gt;&lt;/iframe&gt;
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第七週
+* 學會常微分方程式的dart指令，並且用excel在個人網站遷入圖表
+&lt;img alt="" height="240" src="https://40823125.github.io/cp2019/images/EXCEL_TrEMBcSKX9.png" width="400"&gt;
+&lt;img alt="" height="240" src="https://40823125.github.io/cp2019/images/EXCEL_ZbwcHpT4h6.png" width="400"&gt;
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第八周
+* 使用可攜系統內的pelican內的程式的方式建立Blog 
+* 在blog放入disqus進行可供他人留言
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第十週
+* 將原來推送方法改編為gitextensions推送
+* 耤由建立ssh的鑰匙進行達成不需要輸入密碼就可以推送
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第十一周
+* 用git sparse checkout功能取下github的特定目錄
+* 建立dartpad程式的按鈕
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第十二週
+* 建立溫度字串轉化攝氏轉變華氏dart程式
+&lt;iframe width="800" height="550" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/list string&amp;amp;theme=dark"&gt;&lt;/iframe&gt;
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第十三週
+* 將dart字串轉變為html
+&lt;iframe width="400" height="500" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/list&amp;amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
+* 並且錄製溫度轉換的dart程式和html程式
+&lt;iframe width="560" height="314" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/yMqc_f37ZDY"&gt;&lt;/iframe&gt;
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第十四周
+* 將溫度轉換的html程式轉變為js程式並遷入到個人網站中
+輸入所要轉換的溫度 &lt;input id="F" max="125" min="-40" type="string" value="25F"&gt; &lt;input id="submit" type="button" value="轉換"&gt; 轉換結果: &lt;label id="output"&gt;&lt;/label&gt;
+&lt;script src="/downloads/dart_ex/list/list.js"&gt;&lt;/script&gt;
+
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第十五週
+* 嘗試將五芒星以html程式呈現
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第十六週
+* 嘗試畫出美國國旗並將前幾個程式錄製成影片並發送到老師的issues上面
+&lt;iframe width="400" height="500" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/USA&amp;amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 第十七週
+*寫出重量轉換的dart和html程式
+&lt;iframe width="400" height="500" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/kg.ib&amp;amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
+* 嘗試畫出各國國旗
+&lt;iframe width="400" height="500" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/flag&amp;amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
+*將上述程式轉為js程式並遷入到個人網站中
+*將程式錄製成影片並發送到老師的issues上面
+
+
+    &lt;/script&gt;
+&lt;/section&gt;
+						
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;script src="lib/js/head.min.js"&gt;&lt;/script&gt;
 &lt;script src="js/reveal.js"&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -212,9 +419,7 @@ CMSimfly 網際內容管理
             progress: true,
             history: true,
             center: true,
-
             transition: 'slide', // none/fade/slide/convex/concave/zoom
-
             // More info https://github.com/hakimel/reveal.js#dependencies
             dependencies: [
                 { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -227,9 +432,7 @@ CMSimfly 網際內容管理
             ]
         });
 &lt;/script&gt;
-&lt;/body&gt;
-
-</t>
+&lt;/body&gt;</t>
 <t tx="leo.20180902120523.7">&lt;div class="reveal"&gt;
 @others
 &lt;/div&gt;
