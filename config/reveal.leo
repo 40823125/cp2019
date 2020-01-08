@@ -209,7 +209,7 @@ make.start()
 Created by [40823125](http://lab.kmol.info/)
 &lt;/small&gt;
 
-[cp2019](./../blog/index.html)
+[計算機程式的簡報](./../blog/index.html)
 
 
     &lt;/script&gt;
@@ -233,6 +233,7 @@ Created by [40823125](http://lab.kmol.info/)
 * 學習到瞭如何建立github網站，並且建立一個倉儲 
 * 學會瞭如何使用近端和遠端系統
 * 學習一些dart的基礎程式指令
+
     &lt;/script&gt;
 &lt;/section&gt;
 
@@ -243,7 +244,9 @@ Created by [40823125](http://lab.kmol.info/)
 # 第三週
 * 用gist建立dartpad指令
 * 學習如何使用paoxy進行網路連接
-&lt;iframe src="https://dartpad.dev/embed-html.html?id=9caaacaa5e7df4990fce8540997f7276&amp;split=80&amp;theme=dark&gt;&lt;/iframe&gt;
+&lt;iframe src="https://dartpad.dev/embed-html.html?id=9caaacaa5e7df4990fce8540997f7276 width="800" height="550"&gt;&lt;/iframe&gt;
+
+
     &lt;/script&gt;
 &lt;/section&gt;
 
@@ -280,9 +283,8 @@ Created by [40823125](http://lab.kmol.info/)
     &lt;script type="text/template"&gt;
 # 第六週
 * 將dartpad程式推送到github，用gist 並利用iframe將dartpad嵌入個人網站上
-&lt;iframe width="400" height="300" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/hello&amp;amp;theme=dark"&gt;&lt;/iframe&gt;
 * 使用並學會何為for和main的主函式
-&lt;iframe src="https://dartpad.github.io" width="400" height="500"&gt;&lt;/iframe&gt;
+&lt;iframe src="https://dartpad.github.io" width="800" height="550"&gt;&lt;/iframe&gt;
     &lt;/script&gt;
 &lt;/section&gt;
 
@@ -292,6 +294,7 @@ Created by [40823125](http://lab.kmol.info/)
     &lt;script type="text/template"&gt;
 # 第七週
 * 學會常微分方程式的dart指令，並且用excel在個人網站遷入圖表
+
 &lt;img alt="" height="240" src="https://40823125.github.io/cp2019/images/EXCEL_TrEMBcSKX9.png" width="400"&gt;
 &lt;img alt="" height="240" src="https://40823125.github.io/cp2019/images/EXCEL_ZbwcHpT4h6.png" width="400"&gt;
     &lt;/script&gt;
@@ -304,6 +307,7 @@ Created by [40823125](http://lab.kmol.info/)
 # 第八周
 * 使用可攜系統內的pelican內的程式的方式建立Blog 
 * 在blog放入disqus進行可供他人留言
+
     &lt;/script&gt;
 &lt;/section&gt;
 
@@ -314,6 +318,7 @@ Created by [40823125](http://lab.kmol.info/)
 # 第十週
 * 將原來推送方法改編為gitextensions推送
 * 耤由建立ssh的鑰匙進行達成不需要輸入密碼就可以推送
+
     &lt;/script&gt;
 &lt;/section&gt;
 
@@ -324,6 +329,7 @@ Created by [40823125](http://lab.kmol.info/)
 # 第十一周
 * 用git sparse checkout功能取下github的特定目錄
 * 建立dartpad程式的按鈕
+
     &lt;/script&gt;
 &lt;/section&gt;
 
@@ -333,7 +339,6 @@ Created by [40823125](http://lab.kmol.info/)
     &lt;script type="text/template"&gt;
 # 第十二週
 * 建立溫度字串轉化攝氏轉變華氏dart程式
-&lt;iframe width="800" height="550" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/list string&amp;amp;theme=dark"&gt;&lt;/iframe&gt;
 
 
 
@@ -346,9 +351,7 @@ Created by [40823125](http://lab.kmol.info/)
     &lt;script type="text/template"&gt;
 # 第十三週
 * 將dart字串轉變為html
-&lt;iframe width="400" height="500" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/list&amp;amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
 * 並且錄製溫度轉換的dart程式和html程式
-&lt;iframe width="560" height="314" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/yMqc_f37ZDY"&gt;&lt;/iframe&gt;
 
 
 
@@ -361,8 +364,6 @@ Created by [40823125](http://lab.kmol.info/)
     &lt;script type="text/template"&gt;
 # 第十四周
 * 將溫度轉換的html程式轉變為js程式並遷入到個人網站中
-輸入所要轉換的溫度 &lt;input id="F" max="125" min="-40" type="string" value="25F"&gt; &lt;input id="submit" type="button" value="轉換"&gt; 轉換結果: &lt;label id="output"&gt;&lt;/label&gt;
-&lt;script src="/downloads/dart_ex/list/list.js"&gt;&lt;/script&gt;
 
 
 
@@ -386,7 +387,6 @@ Created by [40823125](http://lab.kmol.info/)
     &lt;script type="text/template"&gt;
 # 第十六週
 * 嘗試畫出美國國旗並將前幾個程式錄製成影片並發送到老師的issues上面
-&lt;iframe width="400" height="500" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/USA&amp;amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
 
 
     &lt;/script&gt;
@@ -396,11 +396,109 @@ Created by [40823125](http://lab.kmol.info/)
     &lt;script type="text/template"&gt;
 # 第十七週
 *寫出重量轉換的dart和html程式
-&lt;iframe width="400" height="500" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/kg.ib&amp;amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
 * 嘗試畫出各國國旗
-&lt;iframe width="400" height="500" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/flag&amp;amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
 *將上述程式轉為js程式並遷入到個人網站中
 *將程式錄製成影片並發送到老師的issues上面
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 解微分方程式
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/quizlet1&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 溫度字串轉換dart程式
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/list string&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 溫度字串轉換html程式
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/list&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 美國國旗
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/USA&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 各國國旗
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/flag&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 溫度字串轉換dart程式
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/kg,ib&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 溫度字串轉換html程式
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/kg.ib&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+    &lt;/script&gt;
+&lt;/section&gt;
+
+&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+# 旋轉美國國旗的星星
+*藉由老師的旋轉國旗的延伸
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/rot USA&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+    &lt;/script&gt;
+&lt;/section&gt;
+						
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script src="lib/js/head.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/reveal.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true },
+                { src: 'plugin/math/math.js', async: true }
+            ]
+        });
+&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+
 
 
     &lt;/script&gt;
