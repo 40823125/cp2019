@@ -303,7 +303,7 @@ Created by [40823125](http://lab.kmol.info/)
     &lt;script type="text/template"&gt;
 # 第十七週
 *寫出重量轉換的dart和html程式
-* 嘗試畫出各國國旗
+*嘗試畫出各國國旗
 *將上述程式轉為js程式並遷入到個人網站中
 *將程式錄製成影片並發送到老師的issues上面
 
