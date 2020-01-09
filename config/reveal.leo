@@ -45,122 +45,30 @@
 </vnodes>
 <tnodes>
 <t tx="leo.20180902120523.1"></t>
-<t tx="leo.20180902120523.10">##  Computer Programming 40823125
-
-&lt;small&gt;
-Created by [40823125](http://lab.kmol.info/)
-&lt;/small&gt;
-
-[計算機程式的簡報](./../blog/index.html)
-
-
+<t tx="leo.20180902120523.10"></t>
+<t tx="leo.20180902120523.11">@others
 </t>
-<t tx="leo.20180902120523.11">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
+<t tx="leo.20180902120523.12"></t>
+<t tx="leo.20180902120523.13">@others
 </t>
-<t tx="leo.20180902120523.12"># 投影片快捷鍵
-
-* 利用箭頭上下前後換頁
-* 按 f 鍵進入全螢幕模式 (full screen)
-* 按 s 鍵可以顯示投影片筆記 (show)
-* 按 o 鍵可以切換單張或全域檢視 (overview)
-* 按 b 或 . 鍵可以切換螢幕黑屏 (black)
-* 按 Esc 可以退出全螢幕或全域檢視 (Escape)
-
+<t tx="leo.20180902120523.14">@others
 </t>
-<t tx="leo.20180902120523.13">&lt;section&gt;
-@others
-&lt;/section&gt;
-
+<t tx="leo.20180902120523.15"></t>
+<t tx="leo.20180902120523.16">@others
 </t>
-<t tx="leo.20180902120523.14">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-						
+<t tx="leo.20180902120523.17">@language python
 </t>
-<t tx="leo.20180902120523.15"># 數學符號與方程式
-
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
-
-$$I = \int \rho R^{2} dV$$
+<t tx="leo.20180902120523.18">@others
 </t>
-<t tx="leo.20180902120523.16">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-						
-</t>
-<t tx="leo.20180902120523.17">## 利用 Markdown 寫投影片
-以下利用 Markdown 格式展示 Python 程式碼:
-```
-@language python
-# use threading and subprocess to threading the make process
-import os
-import subprocess
-import threading
-
-def domake():
-    
-    path = "../exposed/api/exposed"
-    ubuntu = "../Ubuntu"
-    
-    # create obj path
-    
-    if not os.path.exists(path+"/../obj"):
-        os.makedirs(path+"/../obj")
-    
-    subprocess.call(["make", "clean"], cwd=path)
-    subprocess.call("make", cwd=path)
-    subprocess.call(["cp", "{libslvs.so, _slvs.so, slvs.py}", ubuntu], cwd=path)
-    subprocess.call(["python3", "circle_ex.py"], cwd=path+"/"+ubuntu)
-    
-make = threading.Thread(target=domake)
-make.start()
-```
-</t>
-<t tx="leo.20180902120523.18">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
-</t>
-<t tx="leo.20180902120523.19">## 使用 iframe 導入影片
-
-### 導入影片 template
-
-&lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-</t>
+<t tx="leo.20180902120523.19"></t>
 <t tx="leo.20180902120523.2"></t>
 <t tx="leo.20180902120523.3">@language xml
 @tabwidth -4
 @others
-
 </t>
 <t tx="leo.20180902120523.4">&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 @others
-&lt;/html&gt;
 </t>
 <t tx="leo.20180902120523.5">&lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -240,11 +148,10 @@ Created by [40823125](http://lab.kmol.info/)
 
 						
 &lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
+&lt;script type="text/template"&gt;
 # 第三週
 * 用gist建立dartpad指令
 * 學習如何使用paoxy進行網路連接
-&lt;iframe src="https://dartpad.dev/embed-html.html?id=9caaacaa5e7df4990fce8540997f7276 width="800" height="550"&gt;&lt;/iframe&gt;
 
 
     &lt;/script&gt;
@@ -253,7 +160,7 @@ Created by [40823125](http://lab.kmol.info/)
 
 						
 &lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
+ &lt;script type="text/template"&gt;
 # 第四周
 * 開始使用遠端系統編輯網頁，並進行可攜系統推送
 * 在遠端系統添加圖片
@@ -266,7 +173,7 @@ Created by [40823125](http://lab.kmol.info/)
 
 						
 &lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
+   &lt;script type="text/template"&gt;
 # 第五週
 * 上課觀看老師影碟，並學習相關知識
 * 進行網頁自主更新與推送新東西
@@ -405,69 +312,70 @@ Created by [40823125](http://lab.kmol.info/)
 
 &lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
-# 解微分方程式
-&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/quizlet1&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+# #解微分方程式
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/quizlet1&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
     &lt;/script&gt;
 &lt;/section&gt;
 
 &lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
-# 溫度字串轉換dart程式
-&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/list string&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+# #溫度字串轉換dart程式
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/list string&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
     &lt;/script&gt;
 &lt;/section&gt;
 
 &lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
-# 溫度字串轉換html程式
-&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/list&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+# #溫度字串轉換html程式
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/list&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
     &lt;/script&gt;
 &lt;/section&gt;
 
 &lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
-# 美國國旗
-&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/USA&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+# #美國國旗
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/USA&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
     &lt;/script&gt;
 &lt;/section&gt;
 
 &lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
-# 各國國旗
-&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/flag&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+# #各國國旗
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/flag&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
     &lt;/script&gt;
 &lt;/section&gt;
 
 &lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
-# 溫度字串轉換dart程式
-&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/kg,ib&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+# #重量字串轉換dart程式
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/kg,ib&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
     &lt;/script&gt;
 &lt;/section&gt;
 
 &lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
-# 溫度字串轉換html程式
-&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/kg.ib&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+# #重量字串轉換html程式
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/kg.ib&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
     &lt;/script&gt;
 &lt;/section&gt;
 
 &lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
-# 旋轉美國國旗的星星
+# #旋轉美國國旗的星星
 *藉由老師的旋轉國旗的延伸
-&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/rot USA&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width="800" height="550" src="https://dartpad.github.io/embed-html.html?gh_owner=40823125&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/rot USA&amp;theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
     &lt;/script&gt;
 &lt;/section&gt;
 						
+
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -497,59 +405,12 @@ Created by [40823125](http://lab.kmol.info/)
 &lt;/body&gt;
 
 &lt;/html&gt;
-
-
-
-
-    &lt;/script&gt;
-&lt;/section&gt;
-						
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script src="lib/js/head.min.js"&gt;&lt;/script&gt;
-&lt;script src="js/reveal.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-        // More info https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
-            transition: 'slide', // none/fade/slide/convex/concave/zoom
-            // More info https://github.com/hakimel/reveal.js#dependencies
-            dependencies: [
-                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: 'plugin/zoom-js/zoom.js', async: true },
-                { src: 'plugin/notes/notes.js', async: true },
-                { src: 'plugin/math/math.js', async: true }
-            ]
-        });
-&lt;/script&gt;
-&lt;/body&gt;</t>
-<t tx="leo.20180902120523.7">&lt;div class="reveal"&gt;
-@others
-&lt;/div&gt;
-
 </t>
-<t tx="leo.20180902120523.8">&lt;!-- Any section element inside of this container is displayed as a slide --&gt;
-&lt;div class="slides"&gt;
-@others
-&lt;/div&gt;
-
+<t tx="leo.20180902120523.7">@others
 </t>
-<t tx="leo.20180902120523.9">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
+<t tx="leo.20180902120523.8">@others
+</t>
+<t tx="leo.20180902120523.9">@others
 </t>
 <t tx="leo.20180902120538.1"></t>
 <t tx="leo.20180902120538.2">QTreeWidget {
